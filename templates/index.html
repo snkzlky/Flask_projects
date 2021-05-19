@@ -1,0 +1,69 @@
+{% extends "includes/layoutt.html" %}
+
+
+
+{% block body %}
+{% from "includes/_formhelpers.html" import render_field %}
+
+<style>
+    body { 
+      background-image: url('/static/wddqdq.jpg');
+      background-size: contain;
+      background-attachment: fixed;
+    }
+     
+    </style>
+
+<br><br><br><br>
+<div class="jumbotron jumbotron" style="background-color:rgb(241,237,234,255);">
+    <img src="{{url_for('static',filename='unnamed17.jpg')}}" alt="Sun" width="339" height="389">
+    <style>
+        .vl {
+          border-left: 1px solid rgb(218, 191, 74);
+          height: 400px;
+          position: absolute;top: 150px;;left: 520px;
+        }
+        </style>
+        
+        <div class="vl"></div>
+
+        <style>
+          .v2 {
+            border-left: 1px solid rgb(218, 191, 74);
+            height: 400px;
+            position: absolute;top: 150px;;left: 890px;
+          }
+          </style>
+          <div class="v2"></div>
+</div>
+
+
+
+<div>
+  
+    <img src="{{url_for('static',filename='text-1620508673167.png')}}" style="position: absolute;left:215px; top:230px ">
+    <img src="{{url_for('static',filename='text-1621438006152.png')}}" style="position: absolute;left:555px; top:170px ">
+    <img src="{{url_for('static',filename='text-1621438145105.png')}}" style="position: absolute;left:530px; top:250px ">
+    <img src="{{url_for('static',filename='text-1621438185427.png')}}" style="position: absolute;left:580px; top:330px ">
+    <img src="{{url_for('static',filename='text-1621439057757.png')}}" style="position: absolute;left:530px; top:410px">
+    <img src="{{url_for('static',filename='text-1621438559388.png')}}" style="position: absolute;left:620px; top:490px ">
+        
+</div>
+  {% include "includes/flashmessage.html" %}
+<div style="color:rgb(0, 0, 0);position:absolute;left:930px;top:190px; font-size:22px;">
+  <a href="http://localhost:9000/login"><img src="{{url_for('static',filename='text-1621156722550.png')}}" alt="İnternal" style ="position: absolute;left:-20px;top:-76px"></a>
+  <br><br><br>
+  <a href="http://localhost:9000/register"><img src="{{url_for('static',filename='text-1621244511521.png')}}" alt="sign up" style="position:absolute; top:380px;left:90px;"></a>
+  {% from "includes/_formhelpers.html" import render_field %}
+  <form method="post">
+      {{ render_field(form.username) }}
+      {{ render_field(form.password) }}
+      
+      <br>
+      <button type="submit" style="font-size:25px;position: absolute; left:65px;top:300px" class="btn btn-secondary btn-lg">Sign in</button>
+  </form>
+</div>
+
+
+
+{% endblock %}

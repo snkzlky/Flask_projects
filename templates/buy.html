@@ -1,0 +1,23 @@
+{% extends "includes/layoutt.html" %}
+
+
+{% block body %}
+
+<style>
+body { 
+  background-image: url('/static/ddd.jpg');
+  background-size: cover;
+  background-repeat: repeat; 
+  background-position: center;
+  background-attachment: fixed;
+  color:rgb(255, 255, 255)
+}
+
+</style>
+<img src="{{url_for('static',filename='text-1621152695727.png')}}" alt="Lemonade"  style="position: absolute;left:50px; top:100px;">
+<h1 style="color:rgb(0, 0, 0);font-family:Verdana, Geneva, Tahoma, sans-serif;font-size:35px;font-style:normal;position:absolute;left:430px; top:180px;">,{{session["username"]}}</h1>
+
+<a href="/addarticle"><button type="submit" style="font-size:40px;position: absolute; left:220px;top:450px" class="btn btn-secondary btn-lg">  Give offer  </button></a>
+
+
+{% endblock body %}

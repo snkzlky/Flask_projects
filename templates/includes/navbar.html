@@ -1,0 +1,67 @@
+
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="/">
+      <div class="logo-image">
+            <img src="{{url_for('static',filename='text-1621447492310.png')}}" class="img-fluid">
+      </div>
+</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-it em active">
+          <a class="nav-link" href="/">│   ＨＯＭＥ   <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/photos">│   ＰＡＩＮＴＩＮＧＳ   </a>
+        </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about">│   ＡＢＯＵＴ   </a>
+            <li class="nav-item">
+              <a class="nav-link" href="/buy">│  ＢＵＹ   </a>
+          <div class="logo-image">
+            <img src="{{url_for('static',filename='text-1620598085800.png')}}" class="img-fluid" style="position: absolute;left:855px; top:15px">
+      </div>
+</a>
+        
+        
+        </li>
+        </ul>
+        <ul class="navbar-nav mrr-auto">
+
+          {% if session["logged_in"] %}
+          
+            <li class="nav-item">
+              <a class="nav-link" style="position: absolute;top:10px;left:530px;" href="/addarticle"></a>
+          </li>
+          <li class="nav-item active">
+            <a class="navbar-brand" href="/logout">
+      <div class="logo-image">
+            <img src="{{url_for('static',filename='text-1620670452438.png')}}" class="img-fluid" style="position: absolute;left:1222px; top:20px">
+      </div>
+</a> 
+          </li>
+          {% else %}
+          <li class="nav-item active">
+            <a class="navbar-brand" href="/login">
+      <div class="logo-image">
+            <img src="{{url_for('static',filename='text-1620670365971.png')}}" class="img-fluid" style="position: absolute;left:1130px; top:20px">
+          
+            <li class="nav-item active">
+            <a class="navbar-brand" href="/register" >
+      <div class="logo-image">
+            <img src="{{url_for('static',filename='text-1620670305719.png')}}" class="img-fluid" style="position: absolute;left:1230px; top:20px">
+          </div>
+</a>
+          </li>
+          {% endif %}
+         
+      </div>
+</a> 
+         </li>
+         
+      </ul>
+      
+    </div>
+  </nav>

@@ -1,0 +1,32 @@
+{% extends "includes/layoutt.html" %}
+
+{% block body %}
+{% from "includes/_formhelpers.html" import render_field %}
+<style>
+body { 
+  background-image: url('/static/pexels-dominika-roseclay-5115787.jpg');
+  background-size: cover;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  
+  color:rgb(255, 255, 255)
+}
+ 
+</style>
+<br><br><br><br>
+
+<div style="color:rgb(0, 0, 0);position:absolute;left:590px;top:212px; font-size:14px;">
+    <a href="http://localhost:9000/register"><img src="{{url_for('static',filename='text-1621156587347.png')}}" style ="position: absolute;left:-65px;top:-140px"></a>
+    <br>
+    <form method="post">
+        {{ render_field(form.name) }}
+        {{ render_field(form.username) }}
+        {{ render_field(form.email) }}
+        {{ render_field(form.password) }}
+        {{ render_field(form.confirm) }}
+        <br>
+        <button type="submit" style="font-size:23px;" class="btn btn-secondary btn-lg">Sign Up</button>
+
+    </form>
+</div>
+{% endblock body %}

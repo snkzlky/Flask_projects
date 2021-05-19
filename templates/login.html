@@ -1,0 +1,39 @@
+{% extends "includes/layoutt.html" %}
+
+
+{% block body %}
+<style>
+body { 
+  background-image: url('/static/pexels-dominika-roseclay-5115787.jpg');
+  background-size:cover;
+  background-repeat: no-repeat; 
+  
+  color:rgb(255, 255, 255)
+}
+ 
+</style>
+
+<br><br><br>
+
+    {% include "includes/flashmessage.html" %}
+<div style="color:rgb(0, 0, 0);position:absolute;left:550px;top:200px; font-size:22px;">
+    <a href="http://localhost:9000/login"><img src="{{url_for('static',filename='text-1621156722550.png')}}" alt="İnternal" style ="position: absolute;left:-20px;top:-76px"></a>
+    <br><br><br>
+    <a href="http://localhost:9000/register"><img src="{{url_for('static',filename='text-1621244511521.png')}}" alt="sign up" style="position:absolute; top:380px;left:90px;"></a>
+    {% from "includes/_formhelpers.html" import render_field %}
+    <form method="post">
+        {{ render_field(form.username) }}
+        {{ render_field(form.password) }}
+        
+        <br>
+        <button type="submit" style="font-size:25px;position: absolute; left:65px;top:300px" class="btn btn-secondary btn-lg">Sign in</button>
+    </form>
+</div>
+
+
+
+
+
+
+
+{% endblock body %}
